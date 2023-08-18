@@ -67,7 +67,6 @@ const chapter = computed(() => {
   );
 });
 
-
 const lesson = computed(() => {
   return chapter.value.lessons.find(
     (lesson) => lesson.slug === route.params.lessonSlug
@@ -104,5 +103,5 @@ const toggleComplete = () => {
     lesson.value.number - 1
   ] = !isLessonComplete.value;
 };
-
+// end  chapter 3 .
 </script>
