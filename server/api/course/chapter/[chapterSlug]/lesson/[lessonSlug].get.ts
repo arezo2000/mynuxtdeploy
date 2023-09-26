@@ -3,8 +3,8 @@ import {
   Chapter,
   Lesson,
   LessonWithPath,
-} from '~/types/course';
-import course from '~/server/courseData';
+} from '~~/types/course';
+import course from '~~/server/courseData';
 
 course as Course;
 
