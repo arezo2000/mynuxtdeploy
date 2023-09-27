@@ -10,8 +10,7 @@ course as Course;
 
 export default defineEventHandler(
   (event): LessonWithPath => {
-    const { chapterSlug, lessonSlug } =
-      event.context.params;
+    const { chapterSlug, lessonSlug } = event.context.params;
 
     const chapter: Maybe<Chapter> = course.chapters.find(
       (chapter) => chapter.slug === chapterSlug

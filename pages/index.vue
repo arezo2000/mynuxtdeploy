@@ -7,7 +7,6 @@
   </NuxtLink>
 </template>
 
-<script setup>
-const firstLesson = useFirstLesson();
-
+<script setup lang="ts">
+const firstLesson = await useFirstLesson();
 </script>

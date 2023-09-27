@@ -1,10 +1,4 @@
-import {
-  Lesson,
-  LessonWithPath,
-  Chapter,
-  Course,
-} from '~/types/course';
-import courseData from './courseData';
+
 export default {
   title: 'TypeScript with Vue.js 3',
   chapters: [
