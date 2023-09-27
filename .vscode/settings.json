@@ -1,3 +1,6 @@
 {
-    "nuxt.isNuxtApp": false
+  "editor.formatOnSave": true,
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
+  }
 }
