@@ -43,7 +43,7 @@ definePageMeta({
     async function ({ params }, from) {
       const course = await useCourse();
 
-      const chapter = course.value.chapters.find(
+      const chapter = course.value.chatpers.find(
         (chapter) => chapter.slug === params.chapterSlug
       );
 
@@ -74,7 +74,7 @@ definePageMeta({
 });
 
 const chapter = computed(() => {
-  return course.value.chapters.find(
+  return course.value.chatpers.find(
     (chapter) => chapter.slug === route.params.chapterSlug
   );
 });
