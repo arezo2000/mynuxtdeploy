@@ -7,9 +7,10 @@ export default async <T>(url: string) => {
     // determine which serializer to use
     serializer: StorageSerializers.object,
   });
-
   if (!cached.value) {
-    const { data, error } = await useFetch<T>(url);
+    const { data, error } = await useFetch<T>(url, {
+      headers: useRequestHeaders(['cookie']),
+    });
 
     if (error.value) {
       throw createError({
