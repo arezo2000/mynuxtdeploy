@@ -29,7 +29,7 @@ export type ChapterOutline = Prisma.ChapterGetPayload<
 const courseSelect = Prisma.validator<Prisma.CourseArgs>()({
   select: {
     title: true,
-    chatpers: chapterSelect,
+    chapters: chapterSelect,
   },
 });
 export type CourseOutline = Prisma.CourseGetPayload<

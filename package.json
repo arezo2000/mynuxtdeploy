@@ -17,6 +17,11 @@
     "@tailwindcss/typography": "^0.5.8",
     "@vueuse/core": "^9.6.0",
     "@vueuse/nuxt": "^9.6.0",
-    "nuxt": "^3.6.5"
+    "nuxt": "^3.6.5",
+    "@pinia/nuxt": "^0.4.11",
+    "pinia": "^2.1.6"
+  },
+    "overrides": {
+    "vue": "latest"
   }
 }

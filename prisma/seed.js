@@ -7,7 +7,7 @@ async function seed() {
   await prisma.course.create({
     data: {
       title: 'TypeScript with Vue.js 3',
-      chatpers: {
+      chapters: {
         create: [
           {
             title: 'Chapter 1',
