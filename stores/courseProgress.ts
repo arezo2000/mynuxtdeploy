@@ -40,10 +40,10 @@ export const useCourseProgress = defineStore('courseProgress', () => {
 
     // Optimistically update the progress value in the UI
     progress.value[chapter] = {
-      ...(progress.value[chapter] || {}),
-      [lesson]: !currentProgress,
-    };
-
+        ...progress.value[chapter],
+        [lesson]: !currentProgress,
+      };
+    
     // TODO: Update in DB (lesson 6-4)
   };
 
