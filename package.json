@@ -19,7 +19,8 @@
     "@vueuse/nuxt": "^9.6.0",
     "nuxt": "^3.6.5",
     "@pinia/nuxt": "^0.4.11",
-    "pinia": "^2.1.6"
+    "pinia": "^2.1.6",
+    "vite-plugin-vsharp": "^1.3.0"
   },
     "overrides": {
     "vue": "latest"
