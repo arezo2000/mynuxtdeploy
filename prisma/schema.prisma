@@ -1,7 +1,6 @@
 datasource db {
-    url               = env("DATABASE_URL")
-    shadowDatabaseUrl = env("SHADOW_DATABASE_URL")
-    provider          = "postgresql"
+    url      = env("DATABASE_URL")
+    provider = "postgresql"
 }
 
 generator client {
@@ -11,11 +10,12 @@ generator client {
 }
 
 model Course {
-    id        Int       @id @default(autoincrement())
-    title     String
-    chapters  Chapter[]
-    createdAt DateTime  @default(now())
-    updatedAt DateTime  @updatedAt
+    id             Int              @id @default(autoincrement())
+    title          String
+    chapters       Chapter[]
+    createdAt      DateTime         @default(now())
+    updatedAt      DateTime         @updatedAt
+    CoursePurchase CoursePurchase[]
 }
 
 model Chapter {
@@ -56,4 +56,15 @@ model LessonProgress {
     userEmail String
 
     @@unique([lessonId, userEmail])
+}
+
+model CoursePurchase {
+    id        Int      @id @default(autoincrement())
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+    Course    Course   @relation(fields: [courseId], references: [id])
+    courseId  Int
+    userEmail String
+    verified  Boolean  @default(false)
+    paymentId String   @unique
 }
